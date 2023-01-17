@@ -4,18 +4,24 @@
 <?php include('components/head.php'); ?>
 
 <body>
-    
-    <?php include('components/navbar.php') ?>
-    
-    <div class="book-site">
-        <div class="input-group mt-5">
-            <div class="form-outline ">
-                <input type="search" id="form1" class="bookSearchEvent  form-control fs-5" />
-                <label class="form-label z-3 fs-5 " for="form1">Search</label>
-            </div>
-        </div>
-        <section class="search-result border-1">
 
+    <?php include('components/navbar.php') ?>
+    <div class="book-site">
+
+        <section class="search-container">
+                <!-- <div class="form-outline from-floating-label">
+                    <input type="search" name="search" id="form1" class="bookSearchEvent  form-control input-border-bottom" />
+                    <label class="placeholder " for="form1">Search</label>
+                </div> -->
+                <div class="search-bar">
+                    <input type="text" name="search" class="bookSearchEvent search-input">
+                    <label for="search" class="search-label"> Search </label>
+                </div>
+            <div class="search-result">
+                <ul>
+                    
+                </ul>
+            </div>
         </section>
 
         <section class="library">
@@ -27,7 +33,7 @@
                             <div class="card border-0 shadow">
                                 <img src="./assets/img/1stbook.jpg" alt="" class="card-img-top">
                                 <div class="card-body">
-                                    <h4>book 1</h4>
+                                    <h4>b2</h4>
                                     <div class="card-footer">
                                         <small class="text-muted">author Name</small>
                                     </div>
@@ -38,7 +44,7 @@
                             <div class="card border-0 shadow">
                                 <img src="./assets/img/2ndbook.jpg" alt="" class="card-img-top">
                                 <div class="card-body">
-                                    <h4>book 2</h4>
+                                    <h4>2b</h4>
                                     <div class="card-footer">
                                         <small class="text-muted">author Name</small>
                                     </div>
@@ -49,7 +55,7 @@
                             <div class="card border-0 shadow">
                                 <img src="./assets/img/3rdbook.jpg" alt="" class="card-img-top">
                                 <div class="card-body">
-                                    <h4>book 3</h4>
+                                    <h4>3b</h4>
                                     <div class="card-footer">
                                         <small class="text-muted">author Name</small>
                                     </div>
@@ -61,7 +67,7 @@
                             <div class="card border-0 shadow">
                                 <img src="./assets/img/4thbook.jfif" alt="" class="card-img-top">
                                 <div class="card-body">
-                                    <h4>book 4</h4>
+                                    <h4>4b</h4>
                                     <div class="card-footer">
                                         <small class="text-muted">author Name</small>
                                     </div>
@@ -73,7 +79,7 @@
                             <div class="card border-0 shadow">
                                 <img src="./assets/img/5thbook.gif" alt="" class="card-img-top">
                                 <div class="card-body">
-                                    <h4>book 5</h4>
+                                    <h4>b5</h4>
                                     <div class="card-footer">
                                         <small class="text-muted">author Name</small>
                                     </div>
@@ -85,7 +91,7 @@
                             <div class="card border-0 shadow">
                                 <img src="./assets/img/6thbook.jpg" alt="" class="card-img-top">
                                 <div class="card-body">
-                                    <h4>book 6</h4>
+                                    <h4>6b</h4>
                                     <div class="card-footer">
                                         <small class="text-muted">author Name</small>
                                     </div>
@@ -97,7 +103,7 @@
                             <div class="card border-0 shadow">
                                 <img src="./assets/img/7thbook.jfif" alt="" class="card-img-top">
                                 <div class="card-body">
-                                    <h4>book 7</h4>
+                                    <h4>b7b</h4>
                                     <div class="card-footer">
                                         <small class="text-muted">author Name</small>
                                     </div>
