@@ -45,7 +45,7 @@
                     e.preventDefault();
                     $(e.target).parent().next().slideToggle(400)
                 } else {
-                    $(e.target).attr('target', '_blank');
+                    $(e.target).attr('target', '_self');
                 }
 
 
@@ -64,7 +64,10 @@
             margin: 10,
             responsive: {
                 0: {
-                    items: 3
+                    items: 1
+                },
+                400: {
+                    items: 2
                 },
                 600: {
                     items: 3
@@ -136,15 +139,43 @@
             }
 
         });
+
         var favList = {};
-        $('.newspaper-sub-menu ul li i').click(function() {
-            if (!favList[$(this).siblings().text()]) favList[$(this).siblings().text()] = 0;
-            favList[$(this).siblings().text()] = $(this).siblings().text();
-            // console.log(favList);
-            var favMenu = $('.fav-menu');
-            console.log(favList)
-            $(favMenu).append('<li><a href="#">' + favList[$(this).siblings().text()] + '</a></li>')
-        })
+        // $('.newspaper-sub-menu ul li i').click(function() {
+        //     if (!favList[$(this).siblings().text()]) {
+        //         favList[$(this).siblings().text()] = 0;
+        //         console.log('Failed')
+        //     }
+        //     favList[$(this).siblings().text()] = $(this).siblings().text();
+        //     // console.log(favList);
+        //     var favMenu = $('.fav-menu');
+        //     $(favMenu).append('<li><a href="#">' + favList[$(this).siblings().text()] + '</a></li>')
+        //     console.log('s2', $(this).siblings().text())
+        //     console.log('was', favList)
+        //     console.log('was2', favList[$(this).siblings().text()])
+        //     console.log('s3', $(favMenu).children().text() == favList[$(this).siblings().text()])
+
+        //     // console.log('s1' ,$(favMenu).children()[1])
+        //     // $.each(favMenu, function(i,e){
+        //     //     console.log(e)
+        //     //     console.log(i)
+        //     //     if($(e).children().children().text() == favList[$(this).siblings().text()]){
+        //     //         console.log('v.good')
+        //     //     }
+        //     //     console.log($(e).children())
+        //     // })
+        //     var onFav = [];
+
+        //     $.each(favMenu, function(i, e) {
+        //         var matchingItems = $.grep(result, function(item) {
+        //             return item.childNodes[0].textContent === e.childNodes[0].textContent;
+        //         });
+        //         if (matchingItems.length === 0) {
+        //             onFav.push(e.childNodes[1].textContent);
+        //         }
+        //     });
+        //     console.log(onFav);
+        // })
 
     });
 

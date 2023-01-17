@@ -17,7 +17,7 @@
 				<div class="col-md-4">
 				</div>
 				<div class="col-md-4">
-					<a href="#" style="font-size: 35px;"><img src="assets/img/news-logo-2.jpeg" style="width: 160px;border-radius: 10px;"></a>
+					<a href="index.php" style="font-size: 35px;" target="_self" ><img src="assets/img/newspaper logo.png" style="width: 160px;border-radius: 10px;"></a>
 				</div>
 
 			</div>
@@ -58,7 +58,7 @@
 								</span>
 								<div class="newspaper-sub-menu">
 									<ul>
-										<li><i class="fa-regular fa-star fa-lg"></i><a href="https://stackoverflow.com/questions/10539162/using-jquery-to-see-if-a-div-has-a-child-with-a-certain-class" target="_blank"> Arab Times</a>
+										<li><i class="fa-regular fa-star fa-lg"></i><a href="" target="_blank"> Arab Times</a>
 
 										</li>
 										<li><i class=" fa-regular fa-star fa-lg"></i><a href="#"> Al Seyassah</a></li>
@@ -567,7 +567,8 @@
 					</span>
 					<div class="sub-menu ">
 						<ul class="fav-menu">
-						</ul>
+						
+					</ul>
 					</div>
 				</li>
 				<li>
@@ -586,7 +587,7 @@
 				</li>
 				<li>
 					<span>
-						<a href="">
+						<a href="index.php" >
 							Main
 						</a>
 					</span>
