@@ -416,7 +416,7 @@
 									<ul>
 
 										<li><i class="fa-regular fa-star fa-lg"></i><a href="#"> The Dawn </a></li>
-										<li><i class="fa-regular fa-star fa-lg"></i><a href="#"></a> Daily Express News</a></li>
+										<li><i class="fa-regular fa-star fa-lg"></i><a href="#"> Daily Express News</a></li>
 										<li><i class="fa-regular fa-star fa-lg"></i><a href="#"> Jang News</a></li>
 										<li><i class="fa-regular fa-star fa-lg"></i><a href="#"> Daily Pakistan</a></li>
 										<li><i class="fa-regular fa-star fa-lg"></i><a href="#"> Daily Dunya News</a></li>
