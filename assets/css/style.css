@@ -461,15 +461,104 @@ header {
 .topbar-header .container .row img {
 	float: right;
 }
+
 .owl-carousel .owl-item img {
 	height: 392px;
 }
-.book-site{
+
+.book-site {
 	padding: 0 3rem;
 }
-.card-body{
+
+.card-body {
 	text-align: end;
 }
+
+
+/* book search container start  */
+.search-container {
+	margin-top: 1rem;
+	padding: 0;
+	box-shadow: 0px 0px 20px -7px;
+	border-radius: 15px;
+}
+
+/* search input start */
+.search-bar {
+	border: none;
+	padding: 0;
+	position: relative;
+}
+
+.search-bar .search-input {
+	text-align: right;
+	width: 100%;
+	padding-right: 2rem;
+	height: 5rem;
+	border: none;
+	border-radius: 20px;
+	font-size: 1.5rem;
+
+}
+
+.search-bar .search-label {
+	position: absolute;
+	right: 20px;
+	top: 35%;
+	pointer-events: none;
+	font-size: 1.3rem;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+
+.search-bar .search-input:focus {
+	outline: none;
+	border: none;
+}
+
+.search-bar .search-input:focus+.search-label {
+	animation: label-floating .2s ease-in-out 0s forwards;
+
+
+}
+
+
+@keyframes label-floating {
+	from {
+		top: 35%;
+	}
+
+	to {
+		top: 0%;
+	font-size: 1rem;
+
+	}
+}
+
+/* search input end */
+
+
+/* search results start */
+.search-container .search-result {
+	padding: 0 2rem
+}
+
+.search-container .search-result ul li {
+	list-style-type: none;
+	padding: 1rem;
+	font-size: 1.5rem;
+	line-height: 34px;
+	text-align: right;
+}
+
+.search-container .search-result ul li a {
+	color: black;
+	text-decoration: none;
+
+}
+
+/* search results end */
+
 
 @media(max-width:991px) {
 
@@ -590,10 +679,12 @@ header {
 
 		padding-right: 2em;
 	}
-	.mobile-submenu-wrapper .sub-menu .newspaper-sub-menu li{
-		display:flex;
+
+	.mobile-submenu-wrapper .sub-menu .newspaper-sub-menu li {
+		display: flex;
 		align-items: center;
 	}
+
 	.mobile-submenu-wrapper .sub-menu .newspaper-sub-menu li i {
 		flex: 1;
 		text-align: initial;

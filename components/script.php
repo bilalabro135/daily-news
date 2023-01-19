@@ -112,14 +112,27 @@
         });
         console.log(result);
         var bookSearch = ""
+        $(".bookSearchEvent").focusout(function() {
+            if ($('.bookSearchEvent').val().length > 0) {
+                $('.search-label').fadeOut(10)
+            } else {
+                $('.search-label').fadeIn(300)
+
+            }
+        })
         $(".bookSearchEvent").keyup(function() {
-            bookSearch = $(this).val().toLocaleLowerCase();
-            $('.search-result').html('')
+            bookSearch = $(this).val().toLocaleLowerCase().trim();
+            $('.search-result ul').html('')
             $.each(result, function(i, e) {
-                if (e.childNodes[3].childNodes[1].textContent.toLocaleLowerCase().includes(bookSearch)) {
-                    $('.search-result').append("<h4>" + e.childNodes[3].childNodes[1].textContent + "</h4>")
+                if (bookSearch.length > 0) {
+
+                    if ($(e).children()[1].textContent.toLocaleLowerCase().trim().includes(bookSearch)) {
+                        $('.search-result ul').css('border-top', '2px solid #888', 'padding-bottom', '1rem')
+
+                        $('.search-result ul').append("<li> <a href='#'> " + e.childNodes[3].childNodes[1].textContent + " </a></li>")
+                    }
                 } else {
-                    $('.search-result').html();
+                    $('.search-result ul').css('border-top', 'none', 'padding-bottom', '0')
                 }
             })
 
@@ -140,42 +153,6 @@
 
         });
 
-        var favList = {};
-        // $('.newspaper-sub-menu ul li i').click(function() {
-        //     if (!favList[$(this).siblings().text()]) {
-        //         favList[$(this).siblings().text()] = 0;
-        //         console.log('Failed')
-        //     }
-        //     favList[$(this).siblings().text()] = $(this).siblings().text();
-        //     // console.log(favList);
-        //     var favMenu = $('.fav-menu');
-        //     $(favMenu).append('<li><a href="#">' + favList[$(this).siblings().text()] + '</a></li>')
-        //     console.log('s2', $(this).siblings().text())
-        //     console.log('was', favList)
-        //     console.log('was2', favList[$(this).siblings().text()])
-        //     console.log('s3', $(favMenu).children().text() == favList[$(this).siblings().text()])
-
-        //     // console.log('s1' ,$(favMenu).children()[1])
-        //     // $.each(favMenu, function(i,e){
-        //     //     console.log(e)
-        //     //     console.log(i)
-        //     //     if($(e).children().children().text() == favList[$(this).siblings().text()]){
-        //     //         console.log('v.good')
-        //     //     }
-        //     //     console.log($(e).children())
-        //     // })
-        //     var onFav = [];
-
-        //     $.each(favMenu, function(i, e) {
-        //         var matchingItems = $.grep(result, function(item) {
-        //             return item.childNodes[0].textContent === e.childNodes[0].textContent;
-        //         });
-        //         if (matchingItems.length === 0) {
-        //             onFav.push(e.childNodes[1].textContent);
-        //         }
-        //     });
-        //     console.log(onFav);
-        // })
 
     });
 
