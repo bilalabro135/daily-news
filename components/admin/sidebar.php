@@ -1,5 +1,4 @@
 <?php 
-	session_start(); 
 	
 	if (isset($_GET['msg'])) {
 		$url = $_GET['msg'];

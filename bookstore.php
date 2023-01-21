@@ -27,7 +27,7 @@
         <section class="library">
             <div class="container-fluid my-5">
                 <h1 class="tex-center fw-bold display-1 md-3"><span class="text-danger">NEW</span> books</h1>
-                <div class="row mt-5">
+                <div class="row mt-5 books-container ">
                     <div class="owl-carousel allBooks owl-theme">
                         <div class="item  md-4">
                             <div class="card border-0 shadow">
@@ -116,7 +116,7 @@
             </div>
         </section>
 
-
+<!-- 
         <section class="library">
             <div class="container-fluid my-5">
                 <h1 class="tex-center fw-bold display-1 md-3"><span class="text-danger">NEW</span> books</h1>
@@ -208,7 +208,7 @@
                 </div>
             </div>
 
-        </section>
+        </section> -->
 
     </div>
 

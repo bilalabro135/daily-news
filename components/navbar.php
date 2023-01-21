@@ -16,8 +16,8 @@
 				</div>
 				<div class="col-md-4">
 				</div>
-				<div class="col-md-4">
-					<a href="index.php" style="font-size: 35px;" target="_self" ><img src="assets/img/newspaper logo.png" style="width: 160px;border-radius: 10px;"></a>
+				<div class="col-md-4 main-logo">
+					<a href="index.php" style="font-size: 35px;" target="_self" ><img src="assets/img/newspaper logo.png"  class="logo-zoom" style="width: 160px;border-radius: 10px;"></a>
 				</div>
 
 			</div>
@@ -40,13 +40,13 @@
 	</aside>
 	<section class="header-bottom desktop-hide">
 		<div class="header-nav">
+			<button type="button" class="btn btn-primary btn-rounded "><a href="user-login.php">Sign In</a></button>
 			<ul class="row main-event">
 				<li class="has-child ">
 					<span>
 						<a href="#"><i class="fa-solid fa-caret-down" style="font-size: 10px;position: relative;top: -3px;left: -3px;"></i>Countries</a>
 					</span>
 					<div class="sub-menu sub-menu-2">
-						<!-- <input type="text" class="search-event form-control search-bar text-end" id="validationCustom01" placeholder="search country" required> -->
 						<div class="input-group text-end">
 							<div class="form-outline text-end">
 								<input type="search" id="form1" class="spaceEventListenerForCountries form-control text-end" />
