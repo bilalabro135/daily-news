@@ -1,3 +1,8 @@
+<?php 
+    require 'dbwork.php';
+    $books = $obj->books_list();
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,88 +34,23 @@
                 <h1 class="tex-center fw-bold display-1 md-3"><span class="text-danger">NEW</span> books</h1>
                 <div class="row mt-5">
                     <div class="owl-carousel allBooks owl-theme">
-                        <div class="item  md-4">
-                            <div class="card border-0 shadow">
-                                <img src="./assets/img/1stbook.jpg" alt="" class="card-img-top">
-                                <div class="card-body">
-                                    <h4>b2</h4>
-                                    <div class="card-footer">
-                                        <small class="text-muted">author Name</small>
+                        <?php if(isset($books) && count($books) > 0){ 
+                            foreach ($books as $key => $book) {?>
+                                <div class="item  md-4">
+                                    <div class="card border-0 shadow">
+                                        <img src="uploads/<?php echo $book['book_cover']; ?>" alt="" class="card-img-top">
+                                        <div class="card-body">
+                                            <h4><?php echo $book['title']; ?></h4>
+                                            <div class="card-footer">
+                                                <small class="text-muted"><?php echo $book['author'] ?></small>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="item md-4">
-                            <div class="card border-0 shadow">
-                                <img src="./assets/img/2ndbook.jpg" alt="" class="card-img-top">
-                                <div class="card-body">
-                                    <h4>2b</h4>
-                                    <div class="card-footer">
-                                        <small class="text-muted">author Name</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item md-4">
-                            <div class="card border-0 shadow">
-                                <img src="./assets/img/3rdbook.jpg" alt="" class="card-img-top">
-                                <div class="card-body">
-                                    <h4>3b</h4>
-                                    <div class="card-footer">
-                                        <small class="text-muted">author Name</small>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item md-4">
-                            <div class="card border-0 shadow">
-                                <img src="./assets/img/4thbook.jfif" alt="" class="card-img-top">
-                                <div class="card-body">
-                                    <h4>4b</h4>
-                                    <div class="card-footer">
-                                        <small class="text-muted">author Name</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="item md-4">
-                            <div class="card border-0 shadow">
-                                <img src="./assets/img/5thbook.gif" alt="" class="card-img-top">
-                                <div class="card-body">
-                                    <h4>b5</h4>
-                                    <div class="card-footer">
-                                        <small class="text-muted">author Name</small>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="item md-4">
-                            <div class="card border-0 shadow">
-                                <img src="./assets/img/6thbook.jpg" alt="" class="card-img-top">
-                                <div class="card-body">
-                                    <h4>6b</h4>
-                                    <div class="card-footer">
-                                        <small class="text-muted">author Name</small>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="item md-4">
-                            <div class="card border-0 shadow">
-                                <img src="./assets/img/7thbook.jfif" alt="" class="card-img-top">
-                                <div class="card-body">
-                                    <h4>b7b</h4>
-                                    <div class="card-footer">
-                                        <small class="text-muted">author Name</small>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
+                            <?php
+                            } 
+                        }
+                    ?>
                     </div>
                 </div>
             </div>

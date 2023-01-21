@@ -63,13 +63,13 @@
 						</li>
 						<li class="nav-item <?php if($url == 'books'): echo 'active'; endif?>">
 							<a href="books_list.php?msg=books">
-								<i class="fas fa-layer-group layer_focus"></i>
+								<i class="fa-solid fa-book layer_focus" style="font-size:18px;"></i>
 								<p>Books</p>
 							</a>
 						</li>
 						<li class="nav-item <?php if($url == 'book_category'): echo 'active'; endif?>">
 							<a href="book_categories.php?msg=book_category">
-								<i class="fas fa-pen-square layer_focus"></i>
+								<i class="fa fa-list-alt layer_focus" aria-hidden="true"></i>
 								<p>Book Categories</p>
 							</a>
 						</li>

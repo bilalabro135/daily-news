@@ -37,7 +37,7 @@
     public function login($data) 
     {
       extract ($data);
-      $query = "SELECT * FROM `users` WHERE `email` = '$email' and `password` = '$password' ";
+      $query = "SELECT * FROM `users` WHERE `email` = '$email' and `password` = md5('$password') ";
 
       $res = $this->conn->query($query);
   

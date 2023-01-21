@@ -1,3 +1,8 @@
+<?php 
+	require 'dbwork.php';
+	$obj->is_logged_in();
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <?php 
@@ -11,7 +16,7 @@
 		<!-- Sidebar -->
 		<?php require("components/admin/sidebar.php"); ?>
 
-			<div class="main-panel">
+		<div class="main-panel">
 			<div class="content">
 				<div class="page-inner">
 					<div class="page-header">
@@ -97,11 +102,8 @@
 					</div>
 				</div>
 			</div>
-			
 		</div>
-		
 	</div>
-</div>
 
 <?php require "components/admin/foot_script.php"; ?>
 

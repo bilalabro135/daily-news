@@ -27,6 +27,15 @@
 <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?
 			cb=googleTranslateElementInit">
 </script>
+<?php 
+    
+    $count = 0;
+    if (isset($books) && count($books) > 5 ) {
+        $count = 5;
+    }elseif(count($books) < 5){
+        $count = count($books);
+    }
+ ?>
 <script type="text/javascript">
     $(document).ready(function() {
 
@@ -76,18 +85,18 @@
                     items: 4
                 },
                 1200: {
-                    items: 5
+                    items: <?php echo $count; ?>
                 }
             }
         });
-        owl.on('mousewheel', '.owl-stage', function(e) {
-            if (e.deltaY > 0) {
-                owl.trigger('next.owl');
-            } else {
-                owl.trigger('prev.owl');
-            }
-            e.preventDefault();
-        });
+        // owl.on('mousewheel', '.owl-stage', function(e) {
+        //     if (e.deltaY > 0) {
+        //         owl.trigger('next.owl');
+        //     } else {
+        //         owl.trigger('prev.owl');
+        //     }
+        //     e.preventDefault();
+        // });
         $('.spaceEventListenerForCountries').on('input', function(e) {
             var search = $(this).val().toLowerCase();
             var countries = $(".sub-menu ul li span a")
