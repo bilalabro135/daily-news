@@ -283,6 +283,19 @@ header {
 	transition: 0.4s ease;
 }
 
+.header-nav button {
+	position: absolute;
+	top: 12.3rem;
+	left: 14vw;
+	padding: 1rem 2rem;
+}
+
+.header-nav button a {
+	text-decoration: none;
+	color: white;
+	font: 1.2rem
+}
+
 .header-nav .has-child .sub-menu {
 	position: absolute;
 	z-index: 9;
@@ -519,7 +532,6 @@ header {
 .search-bar .search-input:focus+.search-label {
 	animation: label-floating .2s ease-in-out 0s forwards;
 
-
 }
 
 
@@ -530,7 +542,7 @@ header {
 
 	to {
 		top: 0%;
-	font-size: 1rem;
+		font-size: 1rem;
 
 	}
 }
@@ -559,11 +571,48 @@ header {
 
 /* search results end */
 
+.login-form {
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-image: url(../img/2474215.jpg);
+
+}
+
+.login-form-container {
+	max-height: 80%;
+	width: 50%;
+	background: rgb(247, 231, 231) !important;
+	padding: 4rem;
+	border-radius: 21px;
+	box-shadow: inset -20px -18px 13px -5px white,
+	 -14px -11px 13px -5px black
+}
+
+.login-form>h1 {
+	letter-spacing: 2px;
+	margin-bottom: 1rem;
+	text-transform: capitalize;
+	color: white;
+}
+
+.login-form>p {
+	letter-spacing: 3px;
+	margin-bottom: .5rem;
+	text-transform: capitalize;
+	color: white;
+
+}
+
 
 @media(max-width:991px) {
 
 	.desktop-hide {
 		display: none;
+	}
+
+	.main-logo {
+		margin-top: 10px !important;
 	}
 
 	.mobile-hide {
@@ -742,4 +791,27 @@ header {
 	.topbar-header .container .row img {
 		float: none;
 	}
+
+	.mobile-submenu-wrapper button {
+		position: absolute;
+		top: 12.3rem;
+		left: 14vw;
+		padding: 1rem 2rem;
+	}
+
+	.mobile-submenu-wrapper button a {
+		text-decoration: none;
+		color: white;
+		font: 1.2rem
+	}
+
+
+}
+
+@media(max-width:550px) {
+	.library .item img {
+		height: 216px;
+	}
+
+
 }
