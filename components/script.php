@@ -28,8 +28,8 @@
 			cb=googleTranslateElementInit">
 </script>
 <script type="text/javascript">
+    
     $(document).ready(function() {
-
         setTimeout("displayTime()", 100);
         var mobileSubMenu = $('.header-nav');
         var placeMobileSubMenu = $('.mobile-submenu-wrapper');
