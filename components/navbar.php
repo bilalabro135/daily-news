@@ -7,12 +7,6 @@
 						<!-- <?php echo date('D, M d, Y'); ?> -->
 						<span id="date-new"></span>
 					</div>
-					<div class="social d-flex justify-content-evenly">
-						<a href="#" target="_blank" class="icons-sm fb-ic" title="Facebook"><i class="fab fa-2x fa-facebook"></i></a>
-						<!--Twitter-->
-						<a href="#" target="_blank" class="icons-sm tw-ic" title="Twitter"><i class="fab fa-2x fa-twitter"></i></a>
-						<a href="#" target="_blank" class="icons-sm tw-ic" title="Instagram"><i class="fab fa-2x fa-instagram"></i></a>
-					</div>
 				</div>
 				<div class="col-md-4">
 				</div>

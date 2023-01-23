@@ -571,6 +571,8 @@ header {
 
 /* search results end */
 
+/* sign form start */
+
 .login-form {
 	justify-content: center;
 	align-items: center;
@@ -586,7 +588,7 @@ header {
 	padding: 4rem;
 	border-radius: 21px;
 	box-shadow: inset -20px -18px 13px -5px white,
-	 -14px -11px 13px -5px black
+		-14px -11px 13px -5px black
 }
 
 .login-form>h1 {
@@ -604,7 +606,23 @@ header {
 
 }
 
+/* sign form end */
 
+/* books details start */
+.books-details{
+	border:1px solid blue;
+	height:55rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+.books-details-container {
+	display: flex;
+}
+.books-details :is(.left,.right){
+	flex:1
+}
 @media(max-width:991px) {
 
 	.desktop-hide {

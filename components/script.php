@@ -28,8 +28,8 @@
 			cb=googleTranslateElementInit">
 </script>
 <script type="text/javascript">
+    
     $(document).ready(function() {
-
         setTimeout("displayTime()", 100);
         var mobileSubMenu = $('.header-nav');
         var placeMobileSubMenu = $('.mobile-submenu-wrapper');
@@ -59,7 +59,7 @@
         });
         var owl = $('.owl-carousel');
         owl.owlCarousel({
-            loop: true,
+            loop: false,
             nav: false,
             margin: 10,
             responsive: {
