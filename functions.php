@@ -7,7 +7,7 @@
 		switch ($_POST['submit_btn']) {
 			case 'login_btn':
 				$data = $obj->login($_POST);
-				if ($data) {
+				if ($data && $data['id'] == 1) {
 					header("location:dashboard.php?msg=dashboard");
 				}else{
 					header("location:login.php?msg=login-failed");
