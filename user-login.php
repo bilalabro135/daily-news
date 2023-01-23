@@ -1,3 +1,12 @@
+<?php 
+    require 'dbwork.php';
+    $books = $obj->books_list();
+    if (isset($_SESSION['user'])) {
+        header('index.php');
+    }
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <?php include('components/head.php'); ?>

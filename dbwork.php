@@ -72,6 +72,26 @@
       return $data;
     }
 
+    public function books_store()
+    {
+      $query  = "SELECT * FROM `book_categories`
+                              LEFT JOIN `books`
+                              ON  `book_categories`.`id` = `books`.`book_category`";
+      $res    = $this->conn->query($query);
+      $i= 0;
+
+      $data = array();
+
+
+      while($row = $res->fetch_assoc()){
+        foreach ($row as $key => $value) {
+          $data[$i][$key] = $value;
+        }
+        $i++;
+      }
+      return $data;
+    }
+
     public function book_category_list()
     {
       $query  = "SELECT * FROM `book_categories`";
