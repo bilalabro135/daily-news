@@ -1,7 +1,7 @@
-<?php 
-    require 'dbwork.php';
-    $books = $obj->books_list();
- ?>
+<?php
+require 'dbwork.php';
+$books = $obj->books_list();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,17 +14,17 @@
     <div class="book-site">
 
         <section class="search-container">
-                <!-- <div class="form-outline from-floating-label">
+            <!-- <div class="form-outline from-floating-label">
                     <input type="search" name="search" id="form1" class="bookSearchEvent  form-control input-border-bottom" />
                     <label class="placeholder " for="form1">Search</label>
                 </div> -->
-                <div class="search-bar">
-                    <input type="text" name="search" class="bookSearchEvent search-input">
-                    <label for="search" class="search-label"> Search </label>
-                </div>
+            <div class="search-bar">
+                <input type="text" name="search" class="bookSearchEvent search-input">
+                <label for="search" class="search-label"> Search </label>
+            </div>
             <div class="search-result">
                 <ul>
-                    
+
                 </ul>
             </div>
         </section>
@@ -34,8 +34,8 @@
                 <h1 class="tex-center fw-bold display-1 md-3"><span class="text-danger">NEW</span> books</h1>
                 <div class="row mt-5 books-container ">
                     <div class="owl-carousel allBooks owl-theme">
-                        <?php if(isset($books) && count($books) > 0){ 
-                            foreach ($books as $key => $book) {?>
+                        <?php if (isset($books) && count($books) > 0) {
+                            foreach ($books as $key => $book) { ?>
                                 <div class="item  md-4">
                                     <div class="card border-0 shadow">
                                         <img src="uploads/<?php echo $book['book_cover']; ?>" alt="" class="card-img-top">
@@ -47,16 +47,16 @@
                                         </div>
                                     </div>
                                 </div>
-                            <?php
-                            } 
+                        <?php
+                            }
                         }
-                    ?>
+                        ?>
                     </div>
                 </div>
             </div>
         </section>
 
-<!-- 
+        <!-- 
         <section class="library">
             <div class="container-fluid my-5">
                 <h1 class="tex-center fw-bold display-1 md-3"><span class="text-danger">NEW</span> books</h1>

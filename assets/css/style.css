@@ -609,20 +609,51 @@ header {
 /* sign form end */
 
 /* books details start */
-.books-details{
-	border:1px solid blue;
-	height:55rem;
+.books-details {
+	border: 1px solid blue;
+	height: 55rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 
 }
+
 .books-details-container {
 	display: flex;
+	align-content: center;
+	justify-content: center;
+	border: 1px solid red;
 }
-.books-details :is(.left,.right){
-	flex:1
+
+.books-details .left {
+	border: 1px solid green;
+	display: inline-grid;
+	justify-items: start;
+
 }
+
+.books-details :is(.left, .right) {
+	flex: 1;
+	margin-left: 6rem;
+}
+.books-details .right{
+	text-align: right;
+}
+.books-details .right h2 {
+	margin-top: 1rem;
+	font-weight: 800;
+	font-size: 2.6rem;
+}
+.books-details .right  .book-details-header p span {
+	color: #888;
+}
+.books-details .right .book-details-footer h3 {
+	text-align: center;
+	font-weight: 800;
+	font-size: 3.2rem;
+	border-bottom: 1px solid #eee;
+}
+
 @media(max-width:991px) {
 
 	.desktop-hide {
