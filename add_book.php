@@ -95,7 +95,7 @@
 											</div>
 											<div class="col-md-4">
 												<div class="form-group">
-													<label for="book_category">Book PDF <span class="text-warning">*</span></label>
+													<label for="book_category">Book Category <span class="text-warning">*</span></label>
 													<select class="form-control" id="book_category" name="book_category" style="height: 35px; font-size: 14px;">
 														<option selected disabled>--Please select--</option>
 														<?php foreach ($book_cat as $key => $value) {?>

@@ -28,8 +28,17 @@
 			cb=googleTranslateElementInit">
 </script>
 <script type="text/javascript">
-    
     $(document).ready(function() {
+        var CurrentUrl = document.URL;
+        var CurrentUrlEnd = CurrentUrl.split('/').filter(Boolean).pop();
+        $("#is-active li a").each(function() {
+            var ThisUrl = $(this).attr('href');
+            var ThisUrlEnd = ThisUrl.split('/').filter(Boolean).pop();
+
+            if (ThisUrlEnd == CurrentUrlEnd) {
+                $(this).closest('li').addClass('active')
+            }
+        });
         setTimeout("displayTime()", 100);
         var mobileSubMenu = $('.header-nav');
         var placeMobileSubMenu = $('.mobile-submenu-wrapper');
@@ -66,7 +75,7 @@
                 0: {
                     items: 1
                 },
-                400: {
+                300: {
                     items: 2
                 },
                 600: {
@@ -80,14 +89,7 @@
                 }
             }
         });
-        // owl.on('mousewheel', '.owl-stage', function(e) {
-        //     if (e.deltaY > 0) {
-        //         owl.trigger('next.owl');
-        //     } else {
-        //         owl.trigger('prev.owl');
-        //     }
-        //     e.preventDefault();
-        // });
+
         $('.spaceEventListenerForCountries').on('input', function(e) {
             var search = $(this).val().toLowerCase();
             var countries = $(".sub-menu ul li span a")
@@ -110,7 +112,6 @@
                 result.push(e);
             }
         });
-        console.log(result);
         var bookSearch = ""
         $(".bookSearchEvent").focusout(function() {
             if ($('.bookSearchEvent').val().length > 0) {
@@ -130,6 +131,9 @@
                         $('.search-result ul').css('border-top', '2px solid #888', 'padding-bottom', '1rem')
 
                         $('.search-result ul').append("<li> <a href='#'> " + e.childNodes[3].childNodes[1].textContent + " </a></li>")
+
+                        $('.search-result ul li a').attr("href", e.childNodes[3].childNodes[1].childNodes[0])
+
                     }
                 } else {
                     $('.search-result ul').css('border-top', 'none', 'padding-bottom', '0')

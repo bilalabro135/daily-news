@@ -20,10 +20,13 @@
 }
 
 .header-nav .row {
+
 	list-style: none;
 	display: block;
+
 	margin: 0 auto;
 	text-align: center;
+
 }
 
 .header-nav .row li {
@@ -33,7 +36,7 @@
 }
 
 .header-nav .row li a {
-	font-size: 18px;
+	font-size: 1.8rem;
 	padding: 13px 20px;
 	color: #000;
 	font-weight: lighter;
@@ -278,19 +281,26 @@ header {
 }
 
 
+.header-nav {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.header-nav .sign-btn {
+	display: flex;
+	align-items: center;
+}
+
 .header-nav .has-child {
 	position: relative;
 	transition: 0.4s ease;
 }
 
-.header-nav button {
-	position: absolute;
-	top: 12.3rem;
-	left: 14vw;
+.header-nav .sign-btn button {
 	padding: 1rem 2rem;
 }
 
-.header-nav button a {
+.header-nav .sign-btn button a {
 	text-decoration: none;
 	color: white;
 	font: 1.2rem
@@ -390,6 +400,7 @@ header {
 	text-decoration: none;
 	color: #000 !important;
 	text-transform: capitalize;
+	display:block;
 	width: 100%;
 	white-space: nowrap;
 	pointer-events: auto;
@@ -397,6 +408,8 @@ header {
 
 .header-nav .has-child .sub-menu ul li a {
 	border: none;
+	display:block;
+
 	font-size: 15px;
 	padding: 8px 5px 8px 92px;
 	text-transform: capitalize;
@@ -453,7 +466,10 @@ header {
 .header-news-date.d-grid .social a i {
 	font-size: 24px;
 }
+.library h1{
+	text-transform: capitalize;
 
+}
 .library .item {
 	cursor: pointer;
 }
@@ -487,18 +503,39 @@ header {
 	text-align: end;
 }
 
+.card-body h2 a {
+	text-transform: capitalize;
+	text-decoration: none;
+	color: #000;
+	display:block;
+}
+.card-body h2 :hover,
+.card-body h2:active{
+	text-decoration: underline;
+}
+
 
 /* book search container start  */
-.search-container {
+.search {
 	margin-top: 1rem;
 	padding: 0;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+}
+.search-container{
+	max-width: 80%;
+	width:50%;
+	border: none;
 	box-shadow: 0px 0px 20px -7px;
 	border-radius: 15px;
 }
-
+.active span a {
+	color:blue !important;
+}
 /* search input start */
 .search-bar {
-	border: none;
+	
 	padding: 0;
 	position: relative;
 }
@@ -564,6 +601,7 @@ header {
 }
 
 .search-container .search-result ul li a {
+	text-transform: capitalize;
 	color: black;
 	text-decoration: none;
 
@@ -610,7 +648,6 @@ header {
 
 /* books details start */
 .books-details {
-	border: 1px solid blue;
 	height: 55rem;
 	display: flex;
 	align-items: center;
@@ -622,11 +659,9 @@ header {
 	display: flex;
 	align-content: center;
 	justify-content: center;
-	border: 1px solid red;
 }
 
 .books-details .left {
-	border: 1px solid green;
 	display: inline-grid;
 	justify-items: start;
 
@@ -634,27 +669,47 @@ header {
 
 .books-details :is(.left, .right) {
 	flex: 1;
-	margin-left: 6rem;
+	margin-left: 2rem;
 }
-.books-details .right{
+
+.books-details .right {
+	flex:2;
 	text-align: right;
 }
+
 .books-details .right h2 {
 	margin-top: 1rem;
 	font-weight: 800;
 	font-size: 2.6rem;
 }
-.books-details .right  .book-details-header p span {
+
+.books-details .right .book-details-header p span {
 	color: #888;
 }
+.books-details .right .book-details-mid {
+	margin:2rem 0 4rem 0; 
+}
+.books-details .right .book-details-mid button {
+	padding:1rem 2rem;
+	font-size:1.2rem;
+}
 .books-details .right .book-details-footer h3 {
-	text-align: center;
 	font-weight: 800;
 	font-size: 3.2rem;
 	border-bottom: 1px solid #eee;
 }
 
-@media(max-width:991px) {
+.books-details .right .book-details-footer .overview {
+	max-height: 185px;
+	overflow-y: scroll;
+}
+.books-details .right .book-details-footer .overview p {
+	line-height: 20px;
+	overflow: auto;
+
+	
+}
+@media(max-width:770px) {
 
 	.desktop-hide {
 		display: none;
@@ -684,6 +739,25 @@ header {
 		display: inline-block;
 		cursor: pointer;
 	}
+
+	.mobile-sign {
+		position: absolute;
+		bottom: 20px;
+		left: 30px;
+		display: inline-block;
+		cursor: pointer;
+	}
+
+	.mobile-sign button {
+		padding: 1rem 2rem;
+	}
+
+	.mobile-sign button a {
+		text-decoration: none;
+		color: white;
+		font: 1.2rem
+	}
+
 
 	.bar1,
 	.bar2,
@@ -842,17 +916,10 @@ header {
 	}
 
 	.mobile-submenu-wrapper button {
-		position: absolute;
-		top: 12.3rem;
-		left: 14vw;
-		padding: 1rem 2rem;
+		display: none !important;
 	}
 
-	.mobile-submenu-wrapper button a {
-		text-decoration: none;
-		color: white;
-		font: 1.2rem
-	}
+
 
 
 }
@@ -860,6 +927,9 @@ header {
 @media(max-width:550px) {
 	.library .item img {
 		height: 216px;
+	}
+	.library .item .card-footer small {
+		font-size: inherit;
 	}
 
 
