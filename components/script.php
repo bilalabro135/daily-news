@@ -27,15 +27,6 @@
 <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?
 			cb=googleTranslateElementInit">
 </script>
-<?php 
-    
-    $count = 0;
-    if (isset($books) && count($books) > 5 ) {
-        $count = 5;
-    }elseif(count($books) < 5){
-        $count = count($books);
-    }
- ?>
 <script type="text/javascript">
     
     $(document).ready(function() {
@@ -73,19 +64,19 @@
             margin: 10,
             responsive: {
                 0: {
-                    items: 3
+                    items: 1
                 },
                 400: {
-                    items: 3,
+                    items: 2
                 },
                 600: {
-                    items: 3,
+                    items: 3
                 },
                 960: {
                     items: 4
                 },
                 1200: {
-                    items: <?php echo $count; ?>
+                    items: 4
                 }
             }
         });

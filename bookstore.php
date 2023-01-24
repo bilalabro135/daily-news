@@ -1,7 +1,8 @@
-<?php
-require 'dbwork.php';
-$books = $obj->books_list();
-?>
+<?php 
+    require 'dbwork.php';
+    $books           = $obj->books_store();
+    $book_categories = $obj->book_category_list();
+ ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,30 +31,32 @@ $books = $obj->books_list();
         </section>
 
         <section class="library">
-            <div class="container-fluid my-5">
-                <h1 class="tex-center fw-bold display-1 md-3"><span class="text-danger">NEW</span> books</h1>
-                <div class="row mt-5 books-container ">
-                    <div class="owl-carousel allBooks owl-theme">
-                        <?php if (isset($books) && count($books) > 0) {
-                            foreach ($books as $key => $book) { ?>
-                                <div class="item  md-4">
-                                    <div class="card border-0 shadow">
-                                        <img src="uploads/<?php echo $book['book_cover']; ?>" alt="" class="card-img-top">
-                                        <div class="card-body">
-                                            <h4><?php echo $book['title']; ?></h4>
-                                            <div class="card-footer">
-                                                <small class="text-muted"><?php echo $book['author'] ?></small>
+            <?php foreach ($book_categories as $key => $category): ?>
+                    <div class="container-fluid my-5">
+                        <h1 class="tex-center fw-bold display-1 md-3"><span class="text-muted"><?php echo $category['name']; ?></span></h1>
+                        <div class="row mt-5 books-container ">
+                            <div class="owl-carousel allBooks owl-theme">
+                                 <?php foreach ($books as $key => $book): 
+                                    if ($category['id'] == $book['book_category']):
+                                        if(isset($book['name'])):?>
+                                            <div class="item  md-4">
+                                                <div class="card border-0 shadow">
+                                                    <img src="uploads/<?php echo $book['book_cover'] ?>" alt="" class="card-img-top">
+                                                    <div class="card-body">
+                                                        <h4><?php echo $book['name'] ?></h4>
+                                                        <div class="card-footer">
+                                                            <small class="text-muted"><?php echo $book['author'] ?></small>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                        <?php
-                            }
-                        }
-                        ?>
+                                        <?php endif ?>
+                                    <?php endif ?>
+                                <?php endforeach ?>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
+            <?php endforeach ?>
         </section>
 
         <!-- 
